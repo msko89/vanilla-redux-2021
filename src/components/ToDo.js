@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { actionCreators } from '../store';
+import { remove } from '../store';
 
 function mapDispatchToProps(dispatch, ownProps) {
   return {
-    onDelete: () => dispatch(actionCreators.deleteToDo(ownProps.id)),
+    onDelete: () => dispatch(remove(ownProps.id)),
   };
 }
 
